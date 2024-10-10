@@ -163,7 +163,12 @@
         </div>
         <div class="campo">
             <label class="<? echo $error_pais; ?>" for="pais">País:</label>
-            <input type="text" id="pais" name="pais" value="<? echo $pais; ?>" placeholder="Introduce una País...">
+            <input type="text" id="pais" name="pais" value="<? echo $pais; ?>" placeholder="Introduce una País..."><p>Países soportados:
+                <? foreach ($paises as $pais_seleccionado)
+                {
+                    echo $pais_seleccionado;
+                    echo " ";
+                }?> </p>
         </div>
 
         <div class="campo">
